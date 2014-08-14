@@ -10,6 +10,6 @@
 namespace Training {
     
     
-    public partial class Contact {
+    public partial class Parking {
     }
 }

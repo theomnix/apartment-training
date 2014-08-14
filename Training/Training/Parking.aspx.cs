@@ -5,25 +5,34 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication5
+
+namespace Training
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Contact: System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        
+        
+
+
+
+        protected void Total_TextChanged(object sender, EventArgs e)
         {
-            
+           
+
         }
 
-        protected void checkSpots()
+        protected void checkSpots(object sender, EventArgs e)
         {
-            int total = Convert.ToInt32(Total.Text);
+ int total = Convert.ToInt32(Total.Text);
             int handi = Convert.ToInt32(Handicap.Text);
             int comp = Convert.ToInt32(Compact.Text);
-            if (Total.Text < handi + comp)
+            if (total < handi + comp)
             {
-                Response.Write("Too many Spots");
+                global::System.Windows.Forms.MessageBox.Show("Too many parking spaces!");
+                Response.Write("");
             }
         }
-       
+
+        
     }
 }
