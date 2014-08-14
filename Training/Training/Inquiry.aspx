@@ -16,7 +16,7 @@
 
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
-    
+
     </div>
     </form>
 </body>
