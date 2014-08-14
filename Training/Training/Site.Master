@@ -17,8 +17,6 @@
 </head>
 <body>
     <form runat="server">
-        
-
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -32,7 +30,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Inquiry">Inquiry</a></li>
-                        <li><a runat="server" href="~/Flats">Flat</a></li>
+                        <li><a runat="server" href="~/Flat">Flat</a></li>
                         <li><a runat="server" href="~/Parking">Parking</a></li>
                     </ul>
                 </div>
