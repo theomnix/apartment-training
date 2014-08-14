@@ -12,7 +12,7 @@
         <p><b>Choose the Building That the New Parking Lot is Closest to:</b></p>
         <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource2" DataTextField="Building" DataValueField="Building"  />
     
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString %>" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString2 %>" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
 
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
