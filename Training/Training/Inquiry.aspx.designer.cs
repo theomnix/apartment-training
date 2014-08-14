@@ -10,6 +10,33 @@
 namespace Training {
     
     
-    public partial class Parking {
+    public partial class Inquiry {
+        
+        /// <summary>
+        /// hdnAddInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnAddInput;
+        
+        /// <summary>
+        /// btnPlus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPlus;
+        
+        /// <summary>
+        /// phInputs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phInputs;
     }
 }
