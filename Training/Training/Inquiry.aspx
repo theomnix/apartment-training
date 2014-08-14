@@ -1,23 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication5.WebForm1" %>
+﻿<%@ Page Title="Inquiry" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Inquiry.aspx.cs" Inherits="Training.Contact" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <p><b>Choose the Building That the New Parking Lot is Closest to:</b></p>
-        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" OnSelectedIndexChanged="Buildingchoose_SelectedIndexChanged" />
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %>.</h2>
+    <h3>Fill out inquiries to locate an apartment that fits you. Fill out as many preferences as you like and
+        we will match them to the best fit in our system.
+    </h3>
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString %>" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
-
-        <p><b>Total Parking Spots:</b></p>
-        <asp:TextBox ID="Total" runat="server" />
-
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>
