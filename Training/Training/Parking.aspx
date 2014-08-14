@@ -16,7 +16,7 @@
 
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
-        <asp:RegularExpressionValidator ID="Numberonly" runat="server" ControlToValidate"Total" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
+        <asp:RegularExpressionValidator ID="Numberonly" runat="server" ControlToValidate="Total" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
     
     </div>
     </form>
