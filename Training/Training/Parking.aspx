@@ -17,7 +17,20 @@
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
         <asp:RegularExpressionValidator ID="Numberonly" runat="server" ControlToValidate="Total" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
+
+        <p><b>Covered?:</b></p>
+        <asp:RadioButtonList ID="Coveredlist" runat="server">
+            <asp:ListItem>Yes</asp:ListItem>
+            <asp:ListItem>No</asp:ListItem>
+        </asp:RadioButtonList>
     
+         <p><b>Handicap Parking Spots:</b></p>
+        <asp:TextBox ID="Handicap" runat="server" />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="Handicap" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
+
+         <p><b>Compact Parking Spots:</b></p>
+        <asp:TextBox ID="Compact" runat="server" />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="Compact" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
     </div>
     </form>
 </body>
