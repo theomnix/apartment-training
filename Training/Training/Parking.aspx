@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
     <div>
         <p><b>Choose the Building That the New Parking Lot is Closest to:</b></p>
-        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" OnSelectedIndexChanged="Buildingchoose_SelectedIndexChanged" />
+        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource2" DataTextField="Building" DataValueField="Building"  />
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString %>" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString %>" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
 
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
