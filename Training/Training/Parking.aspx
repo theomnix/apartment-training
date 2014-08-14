@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Parking" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parking.aspx.cs" Inherits="Training.Contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Parking.aspx.cs" Inherits="WebApplication5.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,8 @@
 
         <p><b>Total Parking Spots:</b></p>
         <asp:TextBox ID="Total" runat="server" />
-
+        <asp:RegularExpressionValidator ID="Numberonly" runat="server" ControlToValidate"Total" ErrorMessage="Numbers ONLY" ValidationExpression="\d+" />
+    
     </div>
     </form>
 </body>
