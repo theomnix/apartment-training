@@ -14,9 +14,16 @@ namespace WebApplication5
             
         }
 
-        protected void Buildingchoose_SelectedIndexChanged(object sender, EventArgs e)
+        protected void checkSpots()
         {
-
+            int total = Convert.ToInt32(Total.Text);
+            int handi = Convert.ToInt32(Handicap.Text);
+            int comp = Convert.ToInt32(Compact.Text);
+            if (Total.Text < handi + comp)
+            {
+                Response.Write("Too many Spots");
+            }
         }
+       
     }
 }
