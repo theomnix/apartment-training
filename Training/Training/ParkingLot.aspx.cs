@@ -18,7 +18,7 @@ namespace Training
 
         protected void TEST_Click(object sender, EventArgs e)
         {
-
+            
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msgbox", "alert(it's clicked);\n", true);
 
             Response.Write("<script type=text/javascript>");
