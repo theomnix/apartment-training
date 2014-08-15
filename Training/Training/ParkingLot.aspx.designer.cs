@@ -10,7 +10,7 @@
 namespace Training {
     
     
-    public partial class Webform1 {
+    public partial class ParkingLot {
         
         /// <summary>
         /// TEST control.

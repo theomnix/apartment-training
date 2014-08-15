@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="ParkingLot.aspx.cs" Inherits="Training.Webform1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="ParkingLot.aspx.cs" Inherits="Training.ParkingLot" %>
 
 
 

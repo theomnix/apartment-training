@@ -13,30 +13,66 @@ namespace Training {
     public partial class Inquiry {
         
         /// <summary>
-        /// hdnAddInput control.
+        /// firstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hdnAddInput;
+        protected global::System.Web.UI.WebControls.TextBox firstname;
         
         /// <summary>
-        /// btnPlus control.
+        /// lastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPlus;
+        protected global::System.Web.UI.WebControls.TextBox lastname;
         
         /// <summary>
-        /// phInputs control.
+        /// phonenumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phInputs;
+        protected global::System.Web.UI.WebControls.TextBox phonenumber;
+        
+        /// <summary>
+        /// numofbaths control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox numofbaths;
+        
+        /// <summary>
+        /// numofbeds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox numofbeds;
+        
+        /// <summary>
+        /// sqrfootage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sqrfootage;
+        
+        /// <summary>
+        /// submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submit;
     }
 }
