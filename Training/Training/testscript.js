@@ -24,5 +24,9 @@ function addInput(divName) {
         newdiv6.innerHTML = "Square footage: <input type='text' name='sqrfootage" + counter + "'><br><br>";
         document.getElementById(divName).appendChild(newdiv6);
         counter++;
+        
+        /* Here I will add code to add each bit of
+        */
+        document.getElementById('MainContent_hdnfield').value = counter;
     }
 }

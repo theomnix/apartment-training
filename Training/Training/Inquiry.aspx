@@ -33,5 +33,10 @@
     <input type="button" value="+" onClick="addInput('dynamicInput');">
     <br /> <br />
     <asp:Button ID="submit" runat="server" Text="Submit" OnClick="Submit" />
+
+    <asp:HiddenField ID="hdnfield" runat="server" />
+    <!-- Add a HiddenField for each potential value. Each of these fields will correspond with
+        an input field that will be dynamically created. Since a maximum of five inquiries will be
+        allowed, we will need at least 30 hiddenfields. -->
     
 </asp:Content>
