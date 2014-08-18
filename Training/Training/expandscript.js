@@ -25,8 +25,6 @@ function addInput(divName) {
         document.getElementById(divName).appendChild(newdiv6);
         counter++;
         
-        /* Here I will add code to add each bit of
-        */
         document.getElementById('MainContent_hdnfield').value = counter;
         
     }

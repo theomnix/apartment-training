@@ -2,6 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:ScriptManager ID="ScriptMgr" runat="server" EnablePageMethods="true">
+                </asp:ScriptManager>
+
     <div id="inquiry1">
         <br /> <br />
         <h4>Welcome to the Microsoft Flats! Please fill out the inquiry below with your preferences and we will try to locate
@@ -33,7 +36,8 @@
     <input type="button" value="+" onClick="addInput('dynamicInput');">
     <br /> <br />
     <script src="datascript.js" type="text/javascript"></script>
-    <input type="button" value="Submit" onClick="processSubmit();" />
+    <input type="button" value="Process" onClick="processSubmit();" />
+    <input type="button" id="Commit" value="Submit" onClick="Submit"  ="server" disabled/>
 
     <asp:HiddenField ID="hdnfield" runat="server" />
     <asp:HiddenField ID="HiddenField1" runat="server" />

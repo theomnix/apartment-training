@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Web.Services;
 
 namespace Training
 {
@@ -15,20 +16,15 @@ namespace Training
         {
         }
 
-        protected void Submit(object sender, EventArgs e)
+        protected String Submit(object sender, EventArgs e)
         {
             SqlConnection myConnection = new SqlConnection("Data Source=172.50.32.84\\SQLEXPRESS; Server=MININT-3L8403G\\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234");
 
             String counter = hdnfield.Value;
             int count = int.Parse(counter);
-            String first_name;
-            String last_name;
-            String phone_number;
-            String number_of_baths;
-            String number_of_beds;
-            String square_footage;
+           
 
-                myConnection.Open();
+            myConnection.Open();
             /*
             String info = "INSERT INTO Flats VALUES('A', '101', '2', '3', 0, '1500')";
 
@@ -42,7 +38,7 @@ namespace Training
             Response.Write("alert('Connected!!');");
             Response.Write("</script>");
 
-           
+            return "I ate all of my lunch.";
         }
     }
 }
