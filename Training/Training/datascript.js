@@ -113,5 +113,7 @@ function processSubmit() {
         document.getElementById('MainContent_HiddenField24').value = document.getElementById('sqrfootage5').value
     }
     
+    document.getElementById('MainContent_hdnfield').value = count;
     document.getElementById('Commit').disabled = false;
 }
+
