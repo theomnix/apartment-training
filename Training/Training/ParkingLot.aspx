@@ -22,7 +22,7 @@
         <p><b>Closest Building:</b></p>
         <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" />
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=MININT-3L8403G\SQLEXPRESS;Initial Catalog=Apartment;Persist Security Info=True;User ID=test;Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=172.50.32.84\SQLEXPRESS; Server=MININT-3L8403G\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
 
         <p><b>Regular Parking Spaces:</b></p>
         <asp:TextBox ID="slider2" runat="server" />
