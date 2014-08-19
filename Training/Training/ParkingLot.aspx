@@ -18,9 +18,31 @@
         
         <asp:ToolKitScriptManager ID="AJAX" runat="server"  />
        
-       
+       <asp:DropDownList ID="LotChoose" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="LotNumber" DataValueField="LotNumber" OnSelectedIndexChanged="LotChoose_SelectedIndexChanged"  >
+           
+       </asp:DropDownList>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString2 %>" SelectCommand="SELECT [LotNumber] FROM [Parking]"></asp:SqlDataSource>
+        <asp:DropDownList ID="SpotChoose" runat="server" DataSourceID="SqlDataSource3" DataTextField="SpotID" DataValueField="SpotID" />
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString2 %>" SelectCommand="getownerlessspots" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="LotChoose" Name="LotNumber" PropertyName="SelectedValue" Type="Int32" />
+                <asp:ControlParameter ControlID="hidcomp" DefaultValue="" Name="Compact" PropertyName="Text" Type="Byte" />
+                <asp:ControlParameter ControlID="hidhand" DefaultValue="" Name="Handicapped" PropertyName="Text" Type="Byte" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <br />
+        <asp:RadioButtonList ID="SpotType" runat="server" OnSelectedIndexChanged="SpotType_SelectedIndexChanged" AutoPostBack="True" >
+            <asp:ListItem Selected="True">Regular</asp:ListItem>
+            <asp:ListItem>Compact</asp:ListItem>
+            <asp:ListItem>Handicap</asp:ListItem>
+        </asp:RadioButtonList>
+        <asp:TextBox ID="hidcomp" runat="server" Visible="false" Text="0" />
+        <asp:TextBox ID="hidhand" runat="server" Visible="false" Text="0" />
+        <asp:TextBox ID="NewOwner" runat="server" />
+        <asp:TextBoxWatermarkExtender ID="textwater" runat="server" TargetControlID="NewOwner" WatermarkText="Enter Tenant ID" />
         <p><b>Closest Building:</b></p>
         <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" />
+        
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=MININT-3L8403G\SQLEXPRESS;Initial Catalog=Apartment;Persist Security Info=True;User ID=test;Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
 

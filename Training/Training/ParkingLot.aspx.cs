@@ -15,6 +15,13 @@ namespace Training
    
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(IsPostBack){
+
+            }
+            else
+            {
+
+            }
 
         }
 
@@ -107,6 +114,30 @@ namespace Training
             }
                 
 
+        }
+
+        protected void LotChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SpotChoose.DataBind();
+        }
+
+        protected void SpotType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SpotType.SelectedValue.Equals("Regular"))
+            {
+                hidcomp.Text = "0";
+                hidhand.Text = "0";
+            }
+            else if (SpotType.SelectedValue.Equals("Compact"))
+            {
+                hidcomp.Text = "1";
+                hidhand.Text = "0";
+            }
+            else if (SpotType.SelectedValue.Equals("Handicap"))
+            {
+                hidcomp.Text = "0";
+                hidhand.Text = "1";
+            }
         }
     }
 }
