@@ -37,7 +37,17 @@
     <br /> <br />
     <script src="datascript.js" type="text/javascript"></script>
     <input type="button" value="Process" onClick="processSubmit();" />
-    <input type="button" id="Commit" value="Submit" onClick="Submit"  ="server" disabled/>
+    <input type="button" id="Commit" value="Submit" onclick="javascript: GetCityValue()"  ="server" disabled/>
+    <script type="text/javascript">
+        function GetCityValue() {
+            var pageId = '<%=  Page.ClientID %>';
+        __doPostBack(pageId, "USA");
+    }
+    </script>
+
+    
+       <asp:Label id="lblInfo" runat="server"></asp:Label>
+
 
     <asp:HiddenField ID="hdnfield" runat="server" />
     <asp:HiddenField ID="HiddenField1" runat="server" />
