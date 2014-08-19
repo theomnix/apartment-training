@@ -22,22 +22,49 @@ namespace Training {
         protected global::AjaxControlToolkit.ToolkitScriptManager AJAX;
         
         /// <summary>
-        /// textcomments control.
+        /// Buildingchoose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textcomments;
+        protected global::System.Web.UI.WebControls.DropDownList Buildingchoose;
         
         /// <summary>
-        /// but control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button but;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
+        /// slider2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox slider2;
+        
+        /// <summary>
+        /// Sliders2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.SliderExtender Sliders2;
+        
+        /// <summary>
+        /// Regular control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Regular;
         
         /// <summary>
         /// slider1 control.
@@ -76,12 +103,39 @@ namespace Training {
         protected global::AjaxControlToolkit.FilteredTextBoxExtender filterhandicap;
         
         /// <summary>
-        /// NumbersOnly control.
+        /// slider3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator NumbersOnly;
+        protected global::System.Web.UI.WebControls.TextBox slider3;
+        
+        /// <summary>
+        /// Compact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Compact;
+        
+        /// <summary>
+        /// Covered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList Covered;
+        
+        /// <summary>
+        /// but control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button but;
     }
 }

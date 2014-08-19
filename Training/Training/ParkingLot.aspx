@@ -17,16 +17,34 @@
         </script>
         
         <asp:ToolKitScriptManager ID="AJAX" runat="server"  />
-        <asp:TextBox ID="textcomments" TextMode="MultiLine" Columns="60" Rows="8" runat="server" />
        
-        <asp:Button ID="but" runat="server" Text="Do IT!!" OnClick="TEST_Click" />
-        <asp:
+       
+        <p><b>Closest Building:</b></p>
+        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" />
+
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=MININT-3L8403G\SQLEXPRESS;Initial Catalog=Apartment;Persist Security Info=True;User ID=test;Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
+
+        <p><b>Regular Parking Spaces:</b></p>
+        <asp:TextBox ID="slider2" runat="server" />
+        <asp:SliderExtender ID="Sliders2" runat="server" TargetControlID="slider2" Maximum="250" Minimum="1" Steps="100" BoundControlID="Regular" />
+        <asp:Textbox ID="Regular" runat="server" />
+        
+       
+        <p><b>Handicap Spaces:</b></p>
         <asp:TextBox ID="slider1" runat="server" />
-        <asp:SliderExtender ID="Slider" runat="server" TargetControlID="slider1" Maximum="250" Minimum="1" Steps="100" BoundControlID="Handicap" />
-       
-        <asp:TextBox ID="Handicap" runat="server" OnTextChanged="TEST_Click" />
+        <asp:SliderExtender ID="Slider" runat="server" TargetControlID="slider1" Maximum="50" Minimum="1" Steps="50" BoundControlID="Handicap" />
+        <asp:TextBox ID="Handicap" runat="server" />
         <asp:FilteredTextBoxExtender runat="server" ID="filterhandicap" TargetControlID="Handicap" FilterType="Numbers" />
-        <asp:RegularExpressionValidator ID="NumbersOnly" ControlToValidate="Handicap" runat="server" ValidationExpression="\d+" ErrorMessage="Numbers ONLY" />
+        <p><b>Compact Spaces:</b></p>
+        <asp:TextBox ID="slider3" runat="server" />
+        <asp:SliderExtender ID-="Sliders3" runat="server" TargetControlID="slider3" Maximum="50" Minimum="1" Steps="50" BoundControlID="Compact" />
+        <asp:TextBox ID="Compact" runat="server" />
+        <p><b>Is it Covered?</b></p>
+        <asp:RadioButtonList ID="Covered" runat="server">
+            <asp:ListItem>YES</asp:ListItem>
+            <asp:ListItem>NO</asp:ListItem>
+        </asp:RadioButtonList>
+       <asp:Button ID="but" runat="server" Text="ADD" OnClick="TEST_Click" />
         
 
     
