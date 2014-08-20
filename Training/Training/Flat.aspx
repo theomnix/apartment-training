@@ -9,6 +9,6 @@
     <br /> <br />
     <asp:Button ID="Search" Text="Search" runat="server" OnClick="Search_Click" />
     <br /> <br />
-    <asp:TextBox id="results" TextMode="multiline" Columns="130" Rows="15" runat="server" ReadOnly ="true"/>
+    <asp:TextBox id="results" TextMode="multiline" Columns="160" Rows="15" runat="server" ReadOnly ="true"/>
 
 </asp:Content>
