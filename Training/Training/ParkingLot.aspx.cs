@@ -142,6 +142,15 @@ namespace Training
 
         protected void Claimbutton_Click(object sender, EventArgs e)
         {
+            SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
+            SqlCommand owns = new SqlCommand("setowner", connect);
+            owns.CommandType = CommandType.StoredProcedure;
+            owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
+            owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
+            connect.Open();
+            owns.ExecuteNonQuery();
+            connect.Close();
+
 
         }
     }
