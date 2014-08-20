@@ -19,7 +19,7 @@
         <br />
         Unit #:
         <asp:TextBox ID="unitnum" runat="server" />
-        <br />
+        <br /><br />
         Parking:
         Yes
         <asp:RadioButton ID="parking1" runat="server" GroupName="parkingRadioButton"/>
@@ -36,12 +36,12 @@
             <asp:ListItem Text="4" />
             <asp:ListItem Text="5" />
         </asp:DropDownList>
-        <br />
+        <br /><br />
         Co-Tenant:
         <script src="TenantExtendScript.js" type="text/javascript"></script>
-        Yes<input type="radio" name="CoTenant" value="yes" id="CoTenantYes" onClick="onClick('dynamicInput');" onchange="onChange('dynamicInput');" />
-        No<input type="radio" name="CoTenant" value="no" id="CoTenantNo"/><br />
-        <div id="dynamicInput"></div>
+        Yes<input type="radio" name="CoTenant" value="yes" id="CoTenantYes" onClick="yesOnClick('dynamicInput');"/>
+        No<input type="radio" name="CoTenant" value="no" id="CoTenantNo" onClick="noOnClick('dynamicInput');"/><br/>
+        <div id="dynamicInput"></div><br />
 
         How many children?
         <asp:DropDownList ID="children" runat="server">
@@ -53,7 +53,7 @@
             <asp:ListItem Text="4" />
             <asp:ListItem Text="5" />
         </asp:DropDownList>
-        <br />
+        <br /><br />
 
     
     <asp:Button ID="submit" runat="server" Text="Submit" />

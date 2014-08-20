@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace Training
 {
@@ -27,32 +28,68 @@ namespace Training
             SqlConnection myConnection = new SqlConnection("Data Source=172.50.32.84\\SQLEXPRESS; Server=MININT-3L8403G\\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234");
             myConnection.Open();
 
-            String findInquiries = "SELECT FROM Inquiries WHERE FirstName='" + firstname.Text + "', LastName='" + lastname.Text + "'";
+            String findInquiries = "SELECT * FROM Tenants WHERE FirstName='" + firstname.Text + "' AND LastName='" + lastname.Text + "'";
 
             SqlCommand myCommand = new SqlCommand(findInquiries, myConnection);
             SqlDataReader sdr = myCommand.ExecuteReader();
 
             if (sdr.HasRows == true)
             {
+                String building = "";
+                String apt = "";
+                while (sdr.Read())
+                {
+                    building = sdr.GetString(4);
+                    apt = sdr.GetString(5);
+                }
+ 
+                String findYourFlat = "SELECT * FROM Flats WHERE Building='" + building + "' AND Apt='" + apt + "'";
 
+                SqlCommand myCommand3 = new SqlCommand(findInquiries, myConnection);
+                SqlDataReader sdr3 = myCommand.ExecuteReader();
+
+                StringBuilder sb = new StringBuilder();
+
+
+                while (sdr3.Read())
+                {
+                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetString(2) +
+                        " Bathrooms: " + sdr3.GetString(3) + " Washer/Dryer in unit (0=no,1-yes): " + sdr3.GetBoolean(4) + 
+                        " Square Footage: " + sdr3.GetString(5));
+                }
+
+                results.Text = sb.ToString();
+                
+                Response.Write("<script type='text/javascript'>");
+                Response.Write("alert('Here is the info for your flat!');");
+                Response.Write("</script>");
+
+                sdr.Close();
             }
             else
             {
-                String findFlats = "SELECT * FROM Flats";
-                myCommand = new SqlCommand(findFlats, myConnection);
-                SqlDataReader sdr2 = myCommand.ExecuteReader();
+                
+                sdr.Close();
+                String findFlats = "SELECT * FROM Flats WHERE TenantID=NULL";
+                SqlCommand myCommand2 = new SqlCommand(findFlats, myConnection);
+                SqlDataReader sdr2 = myCommand2.ExecuteReader();
+                StringBuilder sb = new StringBuilder();
 
+
+                while (sdr2.Read())
+                {
+                    sb.AppendLine("Apartment: " + sdr2.GetString(0) + sdr2.GetString(1) + " Bedrooms: " + sdr2.GetString(2) + 
+                        " Bathrooms: " + sdr2.GetString(3) + " Washer/Dryer in unit (0=no,1-yes): " + sdr2.GetBoolean(4) + " Square Footage: " + sdr2.GetString(5));
+                }
+                results.Text = sb.ToString();
+                sdr2.Close();
                 Response.Write("<script type='text/javascript'>");
-                Response.Write("alert('No files for" + firstname.Text + " " + lastname.Text + "were found.\n " +
-                                       "All available flats have been listed for your viewing pleasure!');");
+                Response.Write("alert('No info found for your name. We pulled up all of our available flats for you though!');");
                 Response.Write("</script>");
             }
-
-            /*Parse through the dataset. If no data was returned, then run another query and return all available flats
-             */
-
-            myConnection.Close();
             
+
+            myConnection.Close();   
         }
     }
 }
