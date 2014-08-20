@@ -139,5 +139,10 @@ namespace Training
                 hidhand.Text = "1";
             }
         }
+
+        protected void Claimbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

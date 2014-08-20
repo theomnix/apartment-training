@@ -103,6 +103,24 @@ namespace Training {
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender textwater;
         
         /// <summary>
+        /// OwnerNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.FilteredTextBoxExtender OwnerNumber;
+        
+        /// <summary>
+        /// Claimbutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Claimbutton;
+        
+        /// <summary>
         /// Buildingchoose control.
         /// </summary>
         /// <remarks>

@@ -40,6 +40,8 @@
         <asp:TextBox ID="hidhand" runat="server" Visible="false" Text="0" />
         <asp:TextBox ID="NewOwner" runat="server" />
         <asp:TextBoxWatermarkExtender ID="textwater" runat="server" TargetControlID="NewOwner" WatermarkText="Enter Tenant ID" />
+        <asp:FilteredTextBoxExtender ID="OwnerNumber" runat="server" TargetControlID="NewOwner" FilterType="Numbers" />
+        <asp:Button ID="Claimbutton" runat="server" Text="Claim Parking Spot" OnClick="Claimbutton_Click" />
         <p><b>Closest Building:</b></p>
         <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" />
         
