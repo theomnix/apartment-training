@@ -14,7 +14,7 @@
         Last name:
         <asp:TextBox ID="lastname" runat="server" />
         <br />
-        Phone#:
+        Phone #:
         <asp:TextBox ID="phonenumber" runat="server" />
         <br />
         Unit #:
@@ -39,10 +39,9 @@
         <br />
         Co-Tenant:
         <script src="TenantExtendScript.js" type="text/javascript"></script>
+        Yes<input type="radio" name="CoTenant" value="yes" id="CoTenantYes" onClick="onClick('dynamicInput');" onchange="onChange('dynamicInput');" />
+        No<input type="radio" name="CoTenant" value="no" id="CoTenantNo"/><br />
         <div id="dynamicInput"></div>
-        Yes<input type="radio" name="CoTenant" value="yes" id="CoTenantYes" onClick="create('dynamicInput');" />
-        No<input type="radio" name="CoTenant" value="no" id="CoTenantNo" onClick="remove('dynamicInput');"/>
-        <br />
 
         How many children?
         <asp:DropDownList ID="children" runat="server">
@@ -56,13 +55,7 @@
         </asp:DropDownList>
         <br />
 
-    </div>
-    <script src="expandscript.js" type="text/javascript"></script>
-    <div id="dynamicInput">
-          <br>
-    </div>
-    <input type="button" value="+" onClick="addInput('dynamicInput');">
-    <br /> <br />
+    
     <asp:Button ID="submit" runat="server" Text="Submit" />
 
     <asp:HiddenField ID="hdnfield" runat="server" />
