@@ -1,4 +1,5 @@
 ﻿var count;
+
 function processSubmit() {
     count = getCounter();
 
@@ -114,6 +115,6 @@ function processSubmit() {
     }
     
     document.getElementById('MainContent_hdnfield').value = count;
-    document.getElementById('Commit').disabled = false;
+    alert("The redcoats are coming!!");
 }
 

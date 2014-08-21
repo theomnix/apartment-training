@@ -19,10 +19,12 @@ namespace Training
 
             String counter = hdnfield.Value;
             int count = int.Parse(counter);
+            Random rand = new Random();
+            int id = rand.Next(0, 200000);
 
             if (count == 2)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES('" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
+                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
                                    HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
                                    HiddenField30.Value + "')";
 
@@ -31,10 +33,11 @@ namespace Training
             }
             else if (count == 3)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES('" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
+                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
                                    HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
                                    HiddenField30.Value + "')";
-                String inquiry2 = "INSERT INTO Inquiries VALUES('" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
                                    HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
                                    HiddenField6.Value + "')";
 
@@ -45,13 +48,15 @@ namespace Training
             }
             else if (count == 4)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES('" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
+                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
                                   HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
                                   HiddenField30.Value + "')";
-                String inquiry2 = "INSERT INTO Inquiries VALUES('" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
                                    HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
                                    HiddenField6.Value + "')";
-                String inquiry3 = "INSERT INTO Inquiries VALUES('" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
                                    HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
                                    HiddenField12.Value + "')";
 
@@ -64,16 +69,19 @@ namespace Training
             }
             else if (count == 5)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES('" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
+                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
                                  HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
                                  HiddenField30.Value + "')";
-                String inquiry2 = "INSERT INTO Inquiries VALUES('" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
                                    HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
                                    HiddenField6.Value + "')";
-                String inquiry3 = "INSERT INTO Inquiries VALUES('" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
                                    HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
                                    HiddenField12.Value + "')";
-                String inquiry4 = "INSERT INTO Inquiries VALUES('" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry4 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
                                   HiddenField15.Value + "', '" + HiddenField16.Value + "', '" + HiddenField17.Value + "', '" +
                                   HiddenField18.Value + "')";
 
@@ -88,19 +96,23 @@ namespace Training
             }
             else if (count == 6)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES('" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
+                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
                                  HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
                                  HiddenField30.Value + "')";
-                String inquiry2 = "INSERT INTO Inquiries VALUES('" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
                                    HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
                                    HiddenField6.Value + "')";
-                String inquiry3 = "INSERT INTO Inquiries VALUES('" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
                                    HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
                                    HiddenField12.Value + "')";
-                String inquiry4 = "INSERT INTO Inquiries VALUES('" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry4 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
                                   HiddenField15.Value + "', '" + HiddenField16.Value + "', '" + HiddenField17.Value + "', '" +
                                   HiddenField18.Value + "')";
-                String inquiry5 = "INSERT INTO Inquiries VALUES('" + HiddenField19.Value + "', '" + HiddenField20.Value + "', '" +
+                id = rand.Next(0, 200000);
+                String inquiry5 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField19.Value + "', '" + HiddenField20.Value + "', '" +
                                   HiddenField21.Value + "', '" + HiddenField22.Value + "', '" + HiddenField23.Value + "', '" +
                                   HiddenField24.Value + "')";
 
