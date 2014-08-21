@@ -1,27 +1,26 @@
 ﻿var newdiv;
 var newdiv2;
-var clicked = true;
+var yes_clicked = false;
 
-function onClick(divName)
+function yesOnClick(divName)
 {
     //alert("Button Works!");
-    if (clicked)
+    if (!yes_clicked)
     {
         newdiv = document.createElement('div');
         newdiv.innerHTML = "First Name: <input type='text' id='firstname'>" +
                            "<br/>Last Name: <input text='text' id='lastname'>" +
                            "<br/>Phone #: <input text='text' id='phonenum'>";
         document.getElementById(divName).appendChild(newdiv);
-        clicked = false;
-    }
-    else
-    {
-        
+        yes_clicked = true;
     }
 }
 
-function onChange(divName)
+function noOnClick(divName)
 {
-    document.getElementById(divName).removeChild(newdiv);
-    clicked = true;
+    if (yes_clicked)
+    {
+        document.getElementById(divName).removeChild(newdiv);
+        yes_clicked = false;
+    }
 }
