@@ -44,18 +44,18 @@
         <div id="dynamicInput"></div><br />
 
         How many children?
-        <asp:DropDownList ID="children" runat="server">
-            <asp:ListItem Text="---Select---" />
-            <asp:ListItem Text="0" />
-            <asp:ListItem Text="1" />
-            <asp:ListItem Text="2" />
-            <asp:ListItem Text="3" />
-            <asp:ListItem Text="4" />
-            <asp:ListItem Text="5" />
-        </asp:DropDownList>
-        <br /><br />
-
-    
+        <script src="TenantChildrenExtendScript.js" type="text/javascript"></script>
+        <select name="ChildrenSelect" onchange="change('dynamicInput2', this.form.ChildrenSelect);">
+        <option>---Select---</option>
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        </select>
+        <div id="dynamicInput2"></div><br />
+        
     <asp:Button ID="submit" runat="server" Text="Submit" />
 
     <asp:HiddenField ID="hdnfield" runat="server" />
@@ -63,6 +63,6 @@
         an input field that will be dynamically created. Since a maximum of five inquiries will be
         allowed, we will need at least 30 hiddenfields. -->
 
-    
+    </div>
 
 </asp:Content>

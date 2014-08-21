@@ -1,5 +1,4 @@
 ﻿var newdiv;
-var newdiv2;
 var yes_clicked = false;
 
 function yesOnClick(divName)
