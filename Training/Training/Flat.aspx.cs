@@ -44,18 +44,17 @@ namespace Training
                 }
  
                 String findYourFlat = "SELECT * FROM Flats WHERE Building='" + building + "' AND Apt='" + apt + "'";
-
-                SqlCommand myCommand3 = new SqlCommand(findInquiries, myConnection);
-                SqlDataReader sdr3 = myCommand.ExecuteReader();
+                sdr.Close();
+                SqlCommand myCommand3 = new SqlCommand(findYourFlat, myConnection);
+                SqlDataReader sdr3 = myCommand3.ExecuteReader();
 
                 StringBuilder sb = new StringBuilder();
 
-
                 while (sdr3.Read())
                 {
-                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetString(2) +
-                        " Bathrooms: " + sdr3.GetString(3) + " Washer/Dryer in unit (0=no,1-yes): " + sdr3.GetBoolean(4) + 
-                        " Square Footage: " + sdr3.GetString(5));
+                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + "" + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetString(2) +
+                        " Bathrooms: " + sdr3.GetString(3) + " Washer/Dryer in unit: " + sdr3.GetBoolean(4) + 
+                        " Square Footage: " + sdr3.GetString(5) + " TenantID: " + sdr3.GetString(6));
                 }
 
                 results.Text = sb.ToString();
@@ -70,7 +69,7 @@ namespace Training
             {
                 
                 sdr.Close();
-                String findFlats = "SELECT * FROM Flats WHERE TenantID=NULL";
+                String findFlats = "SELECT * FROM Flats WHERE TenantID is NULL";
                 SqlCommand myCommand2 = new SqlCommand(findFlats, myConnection);
                 SqlDataReader sdr2 = myCommand2.ExecuteReader();
                 StringBuilder sb = new StringBuilder();

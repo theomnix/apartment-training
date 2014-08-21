@@ -118,7 +118,7 @@ namespace Training
             myConnection.Close();
 
             Response.Write("<script type='text/javascript'>");
-            Response.Write("alert('Connected!!');");
+            Response.Write("alert('Your inquiries have been successfully processed!');");
             Response.Write("</script>");
         }
     }
