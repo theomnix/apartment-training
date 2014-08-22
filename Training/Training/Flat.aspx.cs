@@ -52,9 +52,9 @@ namespace Training
 
                 while (sdr3.Read())
                 {
-                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + "" + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetString(2) +
-                        " Bathrooms: " + sdr3.GetString(3) + " Washer/Dryer in unit: " + sdr3.GetBoolean(4) + 
-                        " Square Footage: " + sdr3.GetString(5) + " TenantID: " + sdr3.GetString(6));
+                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + "" + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetInt32(2) +
+                        " Bathrooms: " + sdr3.GetInt32(3) + " Washer/Dryer in unit: " + sdr3.GetBoolean(4) + 
+                        " Square Footage: " + sdr3.GetInt32(5) + " TenantID: " + sdr3.GetInt32(6));
                 }
 
                 results.Text = sb.ToString();
@@ -77,8 +77,8 @@ namespace Training
 
                 while (sdr2.Read())
                 {
-                    sb.AppendLine("Apartment: " + sdr2.GetString(0) + sdr2.GetString(1) + " Bedrooms: " + sdr2.GetString(2) + 
-                        " Bathrooms: " + sdr2.GetString(3) + " Washer/Dryer in unit (0=no,1-yes): " + sdr2.GetBoolean(4) + " Square Footage: " + sdr2.GetString(5));
+                    sb.AppendLine("Apartment: " + sdr2.GetString(0) + sdr2.GetString(1) + " Bedrooms: " + sdr2.GetInt32(2) + 
+                        " Bathrooms: " + sdr2.GetInt32(3) + " Washer/Dryer in unit: " + sdr2.GetBoolean(4) + " Square Footage: " + sdr2.GetInt32(5));
                 }
                 results.Text = sb.ToString();
                 sdr2.Close();
