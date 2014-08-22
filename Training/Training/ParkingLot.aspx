@@ -42,13 +42,16 @@
             <asp:TextBoxWatermarkExtender ID="textwater" runat="server" TargetControlID="NewOwner" WatermarkText="Enter Tenant ID" />
             <asp:FilteredTextBoxExtender ID="OwnerNumber" runat="server" TargetControlID="NewOwner" FilterType="Numbers" />
             <asp:Button ID="Claimbutton" runat="server" Text="Claim Parking Spot" OnClick="Claimbutton_Click" />
-        
-        <h3>New Parking Lot:</h3>
+        <asp:Panel ID="ThePanel" runat="server" Visible="false">
+                <h3>New Parking Lot:</h3>
         <p><b>Closest Building:</b></p>
-        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource1" DataTextField="Building" DataValueField="Building" />
+        <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource4" DataTextField="Building" DataValueField="Building" />
         
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=172.50.32.84\SQLEXPRESS; Server=MININT-3L8403G\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ApartmentConnectionString2 %>" SelectCommand="SELECT DISTINCT [Building] FROM [Flats]"></asp:SqlDataSource>
+        
+
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=172.50.32.84\SQLEXPRESS; Server=MININT-3L8403G\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [Building] FROM [Flats]" ></asp:SqlDataSource>
 
         <p><b>Regular Parking Spaces:</b></p>
         <asp:TextBox ID="slider2" runat="server" />
@@ -71,7 +74,7 @@
             <asp:ListItem>NO</asp:ListItem>
         </asp:RadioButtonList>
        <asp:Button ID="but" runat="server" Text="ADD" OnClick="TEST_Click" />
-        
+        </asp:Panel>
 
     
     </div>
