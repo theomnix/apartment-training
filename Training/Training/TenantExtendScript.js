@@ -1,25 +1,37 @@
 ﻿var newdiv;
-var yes_clicked = false;
 
-function yesOnClick(divName)
+function getSelected()
 {
-    //alert("Button Works!");
-    if (!yes_clicked)
-    {
-        newdiv = document.createElement('div');
-        newdiv.innerHTML = "First Name: <input type='text' id='firstname'>" +
-                           "<br/>Last Name: <input text='text' id='lastname'>" +
-                           "<br/>Phone #: <input text='text' id='phonenum'>";
-        document.getElementById(divName).appendChild(newdiv);
-        yes_clicked = true;
-    }
-}
+    var RB1 = document.getElementById("MainContent_marriedRadio");
 
-function noOnClick(divName)
-{
-    if (yes_clicked)
+    var radio = RB1.getElementsByTagName("input");
+
+    //var label = RB1.getElementsByTagName("label");
+
+    if (radio[0].checked)
     {
-        document.getElementById(divName).removeChild(newdiv);
-        yes_clicked = false;
+            newdiv = document.createElement('div');
+            newdiv.innerHTML = "Spouses First Name: <input type='text' id='firstname'>" +
+                               "<br/>Spouses Last Name: <input text='text' id='lastname'>" +
+                               "<br/>Spouses Phone #: <input text='text' id='phonenum'>";
+            document.getElementById('dynamicInput').appendChild(newdiv);
     }
+    else
+    {
+        if (document.getElementById('dynamicInput').innerHTML !== "") {
+            document.getElementById('dynamicInput').removeChild(newdiv);
+        }
+    }
+
+    //for (var i = 0; i < radio.length; i++) {
+
+    //    if (radio[i].checked) {
+
+    //        alert("SelectedText = " + label[i].innerHTML);
+
+    //        alert("SelectedValue = " + radio[i].value);
+
+    //    }
+
+    //}
 }

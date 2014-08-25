@@ -49,22 +49,13 @@ namespace Training {
         protected global::System.Web.UI.WebControls.TextBox unitnum;
         
         /// <summary>
-        /// parking1 control.
+        /// parkingButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton parking1;
-        
-        /// <summary>
-        /// parking2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton parking2;
+        protected global::System.Web.UI.WebControls.RadioButtonList parkingButton;
         
         /// <summary>
         /// parking control.
@@ -76,6 +67,24 @@ namespace Training {
         protected global::System.Web.UI.WebControls.DropDownList parking;
         
         /// <summary>
+        /// marriedRadio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList marriedRadio;
+        
+        /// <summary>
+        /// childrenSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList childrenSelect;
+        
+        /// <summary>
         /// submit control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submit;
+        
+        /// <summary>
+        /// label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label;
         
         /// <summary>
         /// hdnfield control.

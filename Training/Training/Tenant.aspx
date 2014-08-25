@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Tenant.aspx.cs" Inherits="Training._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <script src="TenantExtendScript.js" type="text/javascript"></script>
+    <script src="TenantChildrenExtendScript.js" type="text/javascript"></script>
+    
     <div id="inquiry1">
         <br /> <br />
         <h4>Tenant HQ</h4>
@@ -21,11 +23,10 @@
         <asp:TextBox ID="unitnum" runat="server" />
         <br /><br />
         Parking:
-        Yes
-        <asp:RadioButton ID="parking1" runat="server" GroupName="parkingRadioButton"/>
-        No
-        <asp:RadioButton ID="parking2" runat="server" GroupName="parkingRadioButton"/>
-        <br />
+        <asp:RadioButtonList ID="parkingButton" runat="server">
+            <asp:ListItem>Yes</asp:ListItem>
+            <asp:ListItem>No</asp:ListItem>
+        </asp:RadioButtonList><br />
         How many parking spaces?
         <asp:DropDownList ID="parking" runat="server">
             <asp:ListItem Text="---Select---" />
@@ -37,26 +38,28 @@
             <asp:ListItem Text="5" />
         </asp:DropDownList>
         <br /><br />
-        Co-Tenant:
-        <script src="TenantExtendScript.js" type="text/javascript"></script>
-        Yes<input type="radio" name="CoTenant" value="yes" id="CoTenantYes" onClick="yesOnClick('dynamicInput');"/>
-        No<input type="radio" name="CoTenant" value="no" id="CoTenantNo" onClick="noOnClick('dynamicInput');"/><br/>
+        Married:
+        <asp:RadioButtonList ID="marriedRadio" runat="server" onclick="getSelected()">
+            <asp:ListItem>Yes</asp:ListItem>
+            <asp:ListItem>No</asp:ListItem>
+        </asp:RadioButtonList><br/>
         <div id="dynamicInput"></div><br />
 
         How many children?
-        <script src="TenantChildrenExtendScript.js" type="text/javascript"></script>
-        <select name="ChildrenSelect" onchange="change('dynamicInput2', this.form.ChildrenSelect);">
-        <option>---Select---</option>
-        <option>0</option>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        </select>
+        <asp:DropDownList ID="childrenSelect" runat="server" onchange="change('dynamicInput2', this);">
+        <asp:ListItem>---Select---</asp:ListItem>
+        <asp:ListItem>0</asp:ListItem>
+        <asp:ListItem>1</asp:ListItem>
+        <asp:ListItem>2</asp:ListItem>
+        <asp:ListItem>3</asp:ListItem>
+        <asp:ListItem>4</asp:ListItem>
+        <asp:ListItem>5</asp:ListItem>
+        </asp:DropDownList>
         <div id="dynamicInput2"></div><br />
         
-    <asp:Button ID="submit" runat="server" Text="Submit" />
+    <asp:Button ID="submit" runat="server" Text="Submit" onClick="submit_button"/>
+
+    <!--<asp:Label ID="label" runat="server"></asp:Label>--!>
 
     <asp:HiddenField ID="hdnfield" runat="server" />
     <!-- Add a HiddenField for each potential value. Each of these fields will correspond with
