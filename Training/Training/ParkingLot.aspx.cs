@@ -149,8 +149,9 @@ namespace Training
             //owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
            
             owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
-            SqlDataReader read = owns.ExecuteReader();
+            
             connect.Open();
+            SqlDataReader read = owns.ExecuteReader();
             //owns.ExecuteNonQuery();
             read.Read();
             if (read.HasRows)
@@ -174,8 +175,9 @@ namespace Training
             owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
 
             owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
-            SqlDataReader read = owns.ExecuteReader();
+            
             connect.Open();
+           
             owns.ExecuteNonQuery();
             connect.Close();
         }
