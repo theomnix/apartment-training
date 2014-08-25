@@ -19,16 +19,17 @@
         Phone #:
         <asp:TextBox ID="phonenumber" runat="server" />
         <br />
-        Unit #:
-        <asp:TextBox ID="unitnum" runat="server" />
+        <%--Unit #:--%>
+        <asp:TextBox ID="unitnum" runat="server" visible="false"/>
         <br /><br />
         Parking:
         <asp:RadioButtonList ID="parkingButton" runat="server">
             <asp:ListItem>Yes</asp:ListItem>
             <asp:ListItem>No</asp:ListItem>
         </asp:RadioButtonList><br />
-        How many parking spaces?
-        <asp:DropDownList ID="parking" runat="server">
+        
+        <%--How many parking spaces?--%>
+        <asp:DropDownList ID="parking" runat="server" visible="false">
             <asp:ListItem Text="---Select---" />
             <asp:ListItem Text="0" />
             <asp:ListItem Text="1" />
@@ -55,7 +56,7 @@
         <asp:ListItem>4</asp:ListItem>
         <asp:ListItem>5</asp:ListItem>
         </asp:DropDownList>
-        <div id="dynamicInput2"></div><br />
+        <div id="dynamicInput2" visible="false"></div><br />
         
     <asp:Button ID="submit" runat="server" Text="Submit" onClick="submit_button"/>
 

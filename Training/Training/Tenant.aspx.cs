@@ -51,6 +51,11 @@ namespace Training
                 command.ExecuteNonQuery();
                 myConnection.Close();
             }
+
+            if(parkingButton.SelectedItem.ToString() == "Yes")
+            {
+                Response.Redirect("http://localhost:54810/ParkingLot");
+            }
         }
     }
 }
