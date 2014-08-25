@@ -65,6 +65,7 @@ namespace Training
             con.Open();
             SqlDataReader read = cmd.ExecuteReader();
             read.Read();
+            
             int lotnumber = read.GetInt32(0);
             int totalspots = read.GetInt32(1);
             int compy = read.GetInt32(3);
@@ -143,15 +144,40 @@ namespace Training
         protected void Claimbutton_Click(object sender, EventArgs e)
         {
             SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
+            SqlCommand owns = new SqlCommand("getowner", connect);
+            owns.CommandType = CommandType.StoredProcedure;
+            //owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
+           
+            owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
+            SqlDataReader read = owns.ExecuteReader();
+            connect.Open();
+            //owns.ExecuteNonQuery();
+            read.Read();
+            if (read.HasRows)
+            {
+                setOwnerEvent();
+            }
+            else
+            {
+
+            }
+            connect.Close();
+            
+
+        }
+
+        private void setOwnerEvent()
+        {
+            SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
             SqlCommand owns = new SqlCommand("setowner", connect);
             owns.CommandType = CommandType.StoredProcedure;
             owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
+
             owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
+            SqlDataReader read = owns.ExecuteReader();
             connect.Open();
             owns.ExecuteNonQuery();
             connect.Close();
-
-
         }
 
         
