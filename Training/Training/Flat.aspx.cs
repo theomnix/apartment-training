@@ -35,15 +35,13 @@ namespace Training
 
             if (sdr.HasRows == true)
             {
-                String building = "";
-                String apt = "";
+                int ID = 0;
                 while (sdr.Read())
                 {
-                    building = sdr.GetString(4);
-                    apt = sdr.GetString(5);
+                    ID = sdr.GetInt32(3);
                 }
  
-                String findYourFlat = "SELECT * FROM Flats WHERE Building='" + building + "' AND Apt='" + apt + "'";
+                String findYourFlat = "SELECT * FROM Flats WHERE TenantID=" + ID + "";
                 sdr.Close();
                 SqlCommand myCommand3 = new SqlCommand(findYourFlat, myConnection);
                 SqlDataReader sdr3 = myCommand3.ExecuteReader();
@@ -52,9 +50,9 @@ namespace Training
 
                 while (sdr3.Read())
                 {
-                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + "" + sdr3.GetString(1) + " Bedrooms: " + sdr3.GetInt32(2) +
-                        " Bathrooms: " + sdr3.GetInt32(3) + " Washer/Dryer in unit: " + sdr3.GetBoolean(4) + 
-                        " Square Footage: " + sdr3.GetInt32(5) + " TenantID: " + sdr3.GetInt32(6));
+                    sb.AppendLine("Apartment: " + sdr3.GetString(0) + "" + sdr3.GetString(1) + "; Bedrooms: " + sdr3.GetInt32(2) +
+                        "; Bathrooms: " + sdr3.GetInt32(3) + "; Washer/Dryer in unit: " + sdr3.GetBoolean(4) + 
+                        "; Square Footage: " + sdr3.GetInt32(5) + "; TenantID: " + sdr3.GetInt32(6) + ".");
                 }
 
                 results.Text = sb.ToString();
@@ -87,7 +85,6 @@ namespace Training
                 Response.Write("</script>");
             }
             
-
             myConnection.Close();   
         }
     }

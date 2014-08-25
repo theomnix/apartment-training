@@ -198,8 +198,5 @@
     <asp:HiddenField ID="HiddenField28" runat="server" />
     <asp:HiddenField ID="HiddenField29" runat="server" />
     <asp:HiddenField ID="HiddenField30" runat="server" />
-    <!-- Add a HiddenField for each potential value. Each of these fields will correspond with
-        an input field that will be dynamically created. Since a maximum of five inquiries will be
-        allowed, we will need at least 30 hiddenfields. -->
     
 </asp:Content>

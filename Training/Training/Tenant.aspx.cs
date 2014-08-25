@@ -49,6 +49,18 @@ namespace Training
                 command.Parameters.Add(new SqlParameter("@NumofChildren", int.Parse(childrenSelect.SelectedItem.Text)));
 
                 command.ExecuteNonQuery();
+
+                String unit = unitnum.Text;
+                String building = unit.Substring(0, 1);
+                String apt = unit.Substring(1, unit.Length - 1);
+
+                String addTenant = "UPDATE Flats SET TenantID='" + id + "' WHERE Building='" + building + "' AND Apt='" + apt + "'";
+                SqlCommand command2 = new SqlCommand(addTenant, myConnection);
+                command2.ExecuteNonQuery();
+
+                Response.Write("<script type='text/javascript'>");
+                Response.Write("alert('" + apt + "');");
+                Response.Write("</script>");
                 myConnection.Close();
             }
 

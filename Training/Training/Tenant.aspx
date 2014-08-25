@@ -19,8 +19,8 @@
         Phone #:
         <asp:TextBox ID="phonenumber" runat="server" />
         <br />
-        <%--Unit #:--%>
-        <asp:TextBox ID="unitnum" runat="server" visible="false"/>
+        Unit #
+        <asp:TextBox ID="unitnum" runat="server" visible="true"/>
         <br /><br />
         Parking:
         <asp:RadioButtonList ID="parkingButton" runat="server">
