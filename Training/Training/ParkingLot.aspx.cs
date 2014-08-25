@@ -144,6 +144,7 @@ namespace Training
         protected void Claimbutton_Click(object sender, EventArgs e)
         {
             SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
+            connect.Open();
             SqlCommand owns = new SqlCommand("getowner", connect);
             owns.CommandType = CommandType.StoredProcedure;
             //owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
@@ -159,7 +160,9 @@ namespace Training
             }
             else
             {
-
+                Response.Write("<script type='text/javascript'>");
+                Response.Write("alert('You did not enter a valid tenant ID!!');");
+                Response.Write("</script>");
             }
             connect.Close();
             

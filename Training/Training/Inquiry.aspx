@@ -15,7 +15,7 @@
         <br /> 
         Inquiry 1
         <br />
-        First name: <input type="text" ID="firstname" />
+        First name: <input type="text" ID="firstname" data-parsley-trigger="change" required/>
         <br />
         Last name:  <input type="text" ID="lastname" />
         <br />
