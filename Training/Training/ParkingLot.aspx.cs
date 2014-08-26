@@ -174,7 +174,7 @@ namespace Training
         }
 
         private void setOwnerEvent()
-        {
+        { 
             SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
             SqlCommand owns = new SqlCommand("setowner", connect);
             owns.CommandType = CommandType.StoredProcedure;
