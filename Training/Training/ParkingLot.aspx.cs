@@ -149,9 +149,9 @@ namespace Training
             owns.CommandType = CommandType.StoredProcedure;
             //owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
            
-            owns.Parameters.Add("@Owner", SqlDbType.Int).Value = NewOwner.Text;
+            owns.Parameters.Add("@Owner", SqlDbType.Int).Value = Convert.ToInt32(NewOwner.Text);
             
-            connect.Open();
+            //connect.Open();
             SqlDataReader read = owns.ExecuteReader();
             //owns.ExecuteNonQuery();
             read.Read();
@@ -159,6 +159,9 @@ namespace Training
             if (read.HasRows)
             {
                 setOwnerEvent();
+                Response.Write("<script type='text/javascript'>");
+                Response.Write("alert('Parking spot successfully claimed!!');");
+                Response.Write("</script>");
             }
             else
             {
