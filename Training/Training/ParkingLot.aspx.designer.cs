@@ -121,6 +121,24 @@ namespace Training {
         protected global::System.Web.UI.WebControls.Button Claimbutton;
         
         /// <summary>
+        /// adminpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox adminpass;
+        
+        /// <summary>
+        /// AButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AButton;
+        
+        /// <summary>
         /// ThePanel control.
         /// </summary>
         /// <remarks>
@@ -254,5 +272,23 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button but;
+        
+        /// <summary>
+        /// canc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button canc;
+        
+        /// <summary>
+        /// ModalPop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ModalPopupExtender ModalPop;
     }
 }

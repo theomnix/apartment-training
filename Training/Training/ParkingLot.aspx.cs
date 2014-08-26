@@ -144,7 +144,7 @@ namespace Training
         protected void Claimbutton_Click(object sender, EventArgs e)
         {
             SqlConnection connect = new SqlConnection(SqlDataSource1.ConnectionString);
-            connect.Open();
+            
             SqlCommand owns = new SqlCommand("getowner", connect);
             owns.CommandType = CommandType.StoredProcedure;
             //owns.Parameters.Add("@SpotID", SqlDbType.Int).Value = SpotChoose.SelectedValue;
@@ -155,6 +155,7 @@ namespace Training
             SqlDataReader read = owns.ExecuteReader();
             //owns.ExecuteNonQuery();
             read.Read();
+            connect.Close();
             if (read.HasRows)
             {
                 setOwnerEvent();
@@ -165,7 +166,7 @@ namespace Training
                 Response.Write("alert('You did not enter a valid tenant ID!!');");
                 Response.Write("</script>");
             }
-            connect.Close();
+            
             
 
         }
@@ -183,6 +184,30 @@ namespace Training
            
             owns.ExecuteNonQuery();
             connect.Close();
+        }
+
+        protected void AButton_Click(object sender, EventArgs e)
+        {
+            if (ThePanel.Visible) {
+                ThePanel.Visible = false;
+            }
+            else
+            {
+                ThePanel.Visible = true;
+            }
+            
+        }
+
+        protected void adminpass_TextChanged(object sender, EventArgs e)
+        {
+            if (adminpass.Text.Equals("quake"))
+            {
+                AButton.Enabled = true;
+            }
+            else
+            {
+                AButton.Enabled = false;
+            }
         }
 
         
