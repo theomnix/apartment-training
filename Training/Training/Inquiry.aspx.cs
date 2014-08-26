@@ -20,7 +20,7 @@ namespace Training
             String counter = hdnfield.Value;
             int count = int.Parse(counter);
             Random rand = new Random();
-            int id = rand.Next(0, 200000);
+            int id = rand.Next(0, 500000);
 
             if (count == 2)
             {
