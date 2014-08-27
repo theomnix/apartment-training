@@ -13,11 +13,13 @@
         <br />
         First name:
         <asp:TextBox ID="firstname" runat="server" MaxLength="50" />
-        <asp:RequiredFieldValidator ID="firstname_validator" runat="server" controltovalidate="firstname" ErrorMessage="Please enter a first name!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="firstname_validator" runat="server" controltovalidate="firstname" ErrorMessage="Please enter a first name!" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator id="firstname_reg_validator" runat="server" controltovalidate="firstname" validationexpression="[a-zA-Z''-'\s]{1,50}" enableclientscript="true" errormessage="Please enter a valid first name!" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
         <br />
         Last name:
         <asp:TextBox ID="lastname" runat="server" MaxLength="50"/>
-        <asp:RequiredFieldValidator ID="lastname_validator" runat="server" controltovalidate="lastname" ErrorMessage="Please enter a last name!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="lastname_validator" runat="server" controltovalidate="lastname" ErrorMessage="Please enter a last name!" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator id="lastname_reg_validator" runat="server" controltovalidate="lastname" validationexpression="[a-zA-Z''-'\s]{1,50}" enableclientscript="true" errormessage="Please enter a valid last name!" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
         <br />
         Phone #:
         <asp:TextBox ID="phonenumber" runat="server" MaxLength="12" />
