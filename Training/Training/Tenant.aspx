@@ -7,7 +7,7 @@
     
     <div id="inquiry1">
         <br /> <br />
-        <h4>Tenant Info Entry</h4>
+        <h4>Flat Reservation Info</h4>
         <br /> 
         Tenant
         <br />
