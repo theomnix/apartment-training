@@ -20,112 +20,218 @@ namespace Training
             String counter = hdnfield.Value;
             int count = int.Parse(counter);
             Random rand = new Random();
-            int id = rand.Next(0, 200000);
+            int id = rand.Next(0, 500000);
 
             if (count == 2)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
-                                   HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
-                                   HiddenField30.Value + "')";
+                id = rand.Next(0, 200000);
+                SqlCommand command = new SqlCommand("InsertInquiries", myConnection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@fname", HiddenField25.Value));
+                command.Parameters.Add(new SqlParameter("@lname", HiddenField26.Value));
+                command.Parameters.Add(new SqlParameter("@pnumber", HiddenField27.Value));
+                command.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField28.Value)));
+                command.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField29.Value)));
+                command.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField30.Value)));
 
-                SqlCommand myCommand = new SqlCommand(inquiry1, myConnection);
-                myCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
             }
             else if (count == 3)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
-                                   HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
-                                   HiddenField30.Value + "')";
                 id = rand.Next(0, 200000);
-                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
-                                   HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
-                                   HiddenField6.Value + "')";
+                SqlCommand command = new SqlCommand("InsertInquiries", myConnection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@fname", HiddenField25.Value));
+                command.Parameters.Add(new SqlParameter("@lname", HiddenField26.Value));
+                command.Parameters.Add(new SqlParameter("@pnumber", HiddenField27.Value));
+                command.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField28.Value)));
+                command.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField29.Value)));
+                command.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField30.Value)));
 
-                SqlCommand myCommand = new SqlCommand(inquiry1, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry2, myConnection);
-                myCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                int id2 = rand.Next(0, 200000);
+
+                SqlCommand command2 = new SqlCommand("InsertInquiries", myConnection);
+                command2.CommandType = System.Data.CommandType.StoredProcedure;
+                command2.Parameters.Add(new SqlParameter("@id", id2));
+                command2.Parameters.Add(new SqlParameter("@fname", HiddenField1.Value));
+                command2.Parameters.Add(new SqlParameter("@lname", HiddenField2.Value));
+                command2.Parameters.Add(new SqlParameter("@pnumber", HiddenField3.Value));
+                command2.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField4.Value)));
+                command2.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField5.Value)));
+                command2.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField6.Value)));
+
+                command2.ExecuteNonQuery();
             }
             else if (count == 4)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
-                                  HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
-                                  HiddenField30.Value + "')";
                 id = rand.Next(0, 200000);
-                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
-                                   HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
-                                   HiddenField6.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
-                                   HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
-                                   HiddenField12.Value + "')";
+                SqlCommand command = new SqlCommand("InsertInquiries", myConnection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@fname", HiddenField25.Value));
+                command.Parameters.Add(new SqlParameter("@lname", HiddenField26.Value));
+                command.Parameters.Add(new SqlParameter("@pnumber", HiddenField27.Value));
+                command.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField28.Value)));
+                command.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField29.Value)));
+                command.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField30.Value)));
 
-                SqlCommand myCommand = new SqlCommand(inquiry1, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry2, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry3, myConnection);
-                myCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                int id2 = rand.Next(0, 200000);
+
+                SqlCommand command2 = new SqlCommand("InsertInquiries", myConnection);
+                command2.CommandType = System.Data.CommandType.StoredProcedure;
+                command2.Parameters.Add(new SqlParameter("@id", id2));
+                command2.Parameters.Add(new SqlParameter("@fname", HiddenField1.Value));
+                command2.Parameters.Add(new SqlParameter("@lname", HiddenField2.Value));
+                command2.Parameters.Add(new SqlParameter("@pnumber", HiddenField3.Value));
+                command2.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField4.Value)));
+                command2.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField5.Value)));
+                command2.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField6.Value)));
+
+                command2.ExecuteNonQuery();
+                int id3 = rand.Next(0, 200000);
+
+
+                SqlCommand command3 = new SqlCommand("InsertInquiries", myConnection);
+                command3.CommandType = System.Data.CommandType.StoredProcedure;
+                command3.Parameters.Add(new SqlParameter("@id", id3));
+                command3.Parameters.Add(new SqlParameter("@fname", HiddenField7.Value));
+                command3.Parameters.Add(new SqlParameter("@lname", HiddenField8.Value));
+                command3.Parameters.Add(new SqlParameter("@pnumber", HiddenField9.Value));
+                command3.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField10.Value)));
+                command3.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField11.Value)));
+                command3.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField12.Value)));
+
+                command3.ExecuteNonQuery();
             }
             else if (count == 5)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
-                                 HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
-                                 HiddenField30.Value + "')";
                 id = rand.Next(0, 200000);
-                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
-                                   HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
-                                   HiddenField6.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
-                                   HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
-                                   HiddenField12.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry4 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
-                                  HiddenField15.Value + "', '" + HiddenField16.Value + "', '" + HiddenField17.Value + "', '" +
-                                  HiddenField18.Value + "')";
+                SqlCommand command = new SqlCommand("InsertInquiries", myConnection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@fname", HiddenField25.Value));
+                command.Parameters.Add(new SqlParameter("@lname", HiddenField26.Value));
+                command.Parameters.Add(new SqlParameter("@pnumber", HiddenField27.Value));
+                command.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField28.Value)));
+                command.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField29.Value)));
+                command.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField30.Value)));
 
-                SqlCommand myCommand = new SqlCommand(inquiry1, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry2, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry3, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry4, myConnection);
-                myCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                int id2 = rand.Next(0, 200000);
+
+                SqlCommand command2 = new SqlCommand("InsertInquiries", myConnection);
+                command2.CommandType = System.Data.CommandType.StoredProcedure;
+                command2.Parameters.Add(new SqlParameter("@id", id2));
+                command2.Parameters.Add(new SqlParameter("@fname", HiddenField1.Value));
+                command2.Parameters.Add(new SqlParameter("@lname", HiddenField2.Value));
+                command2.Parameters.Add(new SqlParameter("@pnumber", HiddenField3.Value));
+                command2.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField4.Value)));
+                command2.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField5.Value)));
+                command2.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField6.Value)));
+
+                command2.ExecuteNonQuery();
+                int id3 = rand.Next(0, 200000);
+
+
+                SqlCommand command3 = new SqlCommand("InsertInquiries", myConnection);
+                command3.CommandType = System.Data.CommandType.StoredProcedure;
+                command3.Parameters.Add(new SqlParameter("@id", id3));
+                command3.Parameters.Add(new SqlParameter("@fname", HiddenField7.Value));
+                command3.Parameters.Add(new SqlParameter("@lname", HiddenField8.Value));
+                command3.Parameters.Add(new SqlParameter("@pnumber", HiddenField9.Value));
+                command3.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField10.Value)));
+                command3.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField11.Value)));
+                command3.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField12.Value)));
+
+                command3.ExecuteNonQuery();
+                int id4 = rand.Next(0, 200000);
+
+
+                SqlCommand command4 = new SqlCommand("InsertInquiries", myConnection);
+                command4.CommandType = System.Data.CommandType.StoredProcedure;
+                command4.Parameters.Add(new SqlParameter("@id", id4));
+                command4.Parameters.Add(new SqlParameter("@fname", HiddenField13.Value));
+                command4.Parameters.Add(new SqlParameter("@lname", HiddenField14.Value));
+                command4.Parameters.Add(new SqlParameter("@pnumber", HiddenField15.Value));
+                command4.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField16.Value)));
+                command4.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField17.Value)));
+                command4.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField18.Value)));
+
+                command4.ExecuteNonQuery();
             }
             else if (count == 6)
             {
-                String inquiry1 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField25.Value + "', '" + HiddenField26.Value + "', '" +
-                                 HiddenField27.Value + "', '" + HiddenField28.Value + "', '" + HiddenField29.Value + "', '" +
-                                 HiddenField30.Value + "')";
                 id = rand.Next(0, 200000);
-                String inquiry2 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField1.Value + "', '" + HiddenField2.Value + "', '" +
-                                   HiddenField3.Value + "', '" + HiddenField4.Value + "', '" + HiddenField5.Value + "', '" +
-                                   HiddenField6.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry3 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField7.Value + "', '" + HiddenField8.Value + "', '" +
-                                   HiddenField9.Value + "', '" + HiddenField10.Value + "', '" + HiddenField11.Value + "', '" +
-                                   HiddenField12.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry4 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField13.Value + "', '" + HiddenField14.Value + "', '" +
-                                  HiddenField15.Value + "', '" + HiddenField16.Value + "', '" + HiddenField17.Value + "', '" +
-                                  HiddenField18.Value + "')";
-                id = rand.Next(0, 200000);
-                String inquiry5 = "INSERT INTO Inquiries VALUES(" + id + ", '" + HiddenField19.Value + "', '" + HiddenField20.Value + "', '" +
-                                  HiddenField21.Value + "', '" + HiddenField22.Value + "', '" + HiddenField23.Value + "', '" +
-                                  HiddenField24.Value + "')";
+                SqlCommand command = new SqlCommand("InsertInquiries", myConnection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@id", id));
+                command.Parameters.Add(new SqlParameter("@fname", HiddenField25.Value));
+                command.Parameters.Add(new SqlParameter("@lname", HiddenField26.Value));
+                command.Parameters.Add(new SqlParameter("@pnumber", HiddenField27.Value));
+                command.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField28.Value)));
+                command.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField29.Value)));
+                command.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField30.Value)));
 
-                SqlCommand myCommand = new SqlCommand(inquiry1, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry2, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry3, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry4, myConnection);
-                myCommand.ExecuteNonQuery();
-                myCommand = new SqlCommand(inquiry5, myConnection);
-                myCommand.ExecuteNonQuery();
+                command.ExecuteNonQuery();
+                int id2 = rand.Next(0, 200000);
+
+                SqlCommand command2 = new SqlCommand("InsertInquiries", myConnection);
+                command2.CommandType = System.Data.CommandType.StoredProcedure;
+                command2.Parameters.Add(new SqlParameter("@id", id2));
+                command2.Parameters.Add(new SqlParameter("@fname", HiddenField1.Value));
+                command2.Parameters.Add(new SqlParameter("@lname", HiddenField2.Value));
+                command2.Parameters.Add(new SqlParameter("@pnumber", HiddenField3.Value));
+                command2.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField4.Value)));
+                command2.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField5.Value)));
+                command2.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField6.Value)));
+
+                command2.ExecuteNonQuery();
+                int id3 = rand.Next(0, 200000);
+
+
+                SqlCommand command3 = new SqlCommand("InsertInquiries", myConnection);
+                command3.CommandType = System.Data.CommandType.StoredProcedure;
+                command3.Parameters.Add(new SqlParameter("@id", id3));
+                command3.Parameters.Add(new SqlParameter("@fname", HiddenField7.Value));
+                command3.Parameters.Add(new SqlParameter("@lname", HiddenField8.Value));
+                command3.Parameters.Add(new SqlParameter("@pnumber", HiddenField9.Value));
+                command3.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField10.Value)));
+                command3.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField11.Value)));
+                command3.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField12.Value)));
+
+                command3.ExecuteNonQuery();
+                int id4 = rand.Next(0, 200000);
+
+
+                SqlCommand command4 = new SqlCommand("InsertInquiries", myConnection);
+                command4.CommandType = System.Data.CommandType.StoredProcedure;
+                command4.Parameters.Add(new SqlParameter("@id", id4));
+                command4.Parameters.Add(new SqlParameter("@fname", HiddenField13.Value));
+                command4.Parameters.Add(new SqlParameter("@lname", HiddenField14.Value));
+                command4.Parameters.Add(new SqlParameter("@pnumber", HiddenField15.Value));
+                command4.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField16.Value)));
+                command4.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField17.Value)));
+                command4.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField18.Value)));
+
+                command4.ExecuteNonQuery();
+                int id5 = rand.Next(0, 200000);
+
+               
+                SqlCommand command5 = new SqlCommand("InsertInquiries", myConnection);
+                command5.CommandType = System.Data.CommandType.StoredProcedure;
+                command5.Parameters.Add(new SqlParameter("@id", id5));
+                command5.Parameters.Add(new SqlParameter("@fname", HiddenField19.Value));
+                command5.Parameters.Add(new SqlParameter("@lname", HiddenField20.Value));
+                command5.Parameters.Add(new SqlParameter("@pnumber", HiddenField21.Value));
+                command5.Parameters.Add(new SqlParameter("@numbaths", int.Parse(HiddenField22.Value)));
+                command5.Parameters.Add(new SqlParameter("@numbeds", int.Parse(HiddenField23.Value)));
+                command5.Parameters.Add(new SqlParameter("@sfootage", int.Parse(HiddenField24.Value)));
+
+                command5.ExecuteNonQuery();
             }
             myConnection.Close();
 

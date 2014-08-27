@@ -28,11 +28,13 @@ namespace Training
             SqlConnection myConnection = new SqlConnection("Data Source=172.50.32.84\\SQLEXPRESS; Server=MININT-3L8403G\\SQLEXPRESS; Initial Catalog=Apartment; User ID=test; Password=1234");
             myConnection.Open();
 
-            String findInquiries = "SELECT * FROM Tenants WHERE FirstName='" + firstname.Text + "' AND LastName='" + lastname.Text + "'";
-
-            SqlCommand myCommand = new SqlCommand(findInquiries, myConnection);
-            SqlDataReader sdr = myCommand.ExecuteReader();
-
+            SqlCommand command = new SqlCommand("SelectTenants", myConnection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.Add(new SqlParameter("@fname", firstname.Text));
+            command.Parameters.Add(new SqlParameter("@lname", lastname.Text));
+            
+            SqlDataReader sdr = command.ExecuteReader();
+  
             if (sdr.HasRows == true)
             {
                 int ID = 0;
