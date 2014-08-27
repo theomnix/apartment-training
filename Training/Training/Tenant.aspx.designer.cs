@@ -22,6 +22,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.TextBox firstname;
         
         /// <summary>
+        /// firstname_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator firstname_validator;
+        
+        /// <summary>
         /// lastname control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox lastname;
+        
+        /// <summary>
+        /// lastname_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator lastname_validator;
         
         /// <summary>
         /// phonenumber control.
@@ -40,6 +58,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.TextBox phonenumber;
         
         /// <summary>
+        /// phonenumber_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator phonenumber_validator;
+        
+        /// <summary>
         /// unitnum control.
         /// </summary>
         /// <remarks>
@@ -47,6 +74,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox unitnum;
+        
+        /// <summary>
+        /// unitnum_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator unitnum_validator;
         
         /// <summary>
         /// parkingButton control.
@@ -110,5 +146,23 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnfield;
+        
+        /// <summary>
+        /// hdnfield2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnfield2;
+        
+        /// <summary>
+        /// hdnfield3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdnfield3;
     }
 }

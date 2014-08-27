@@ -69,4 +69,3 @@ function remove(divName)
 {
     document.getElementById(divName).removeChild(newdiv);
 }
-

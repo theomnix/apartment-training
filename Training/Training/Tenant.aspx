@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Tenant.aspx.cs" Inherits="Training._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
     <script src="TenantExtendScript.js" type="text/javascript"></script>
     <script src="TenantChildrenExtendScript.js" type="text/javascript"></script>
     
@@ -11,16 +12,20 @@
         Tenant
         <br />
         First name:
-        <asp:TextBox ID="firstname" runat="server" />
+        <asp:TextBox ID="firstname" runat="server" MaxLength="50" />
+        <asp:RequiredFieldValidator ID="firstname_validator" runat="server" controltovalidate="firstname" ErrorMessage="Please Enter a first name!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         Last name:
         <asp:TextBox ID="lastname" runat="server" />
+        <asp:RequiredFieldValidator ID="lastname_validator" runat="server" controltovalidate="lastname" ErrorMessage="Please Enter a last name!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         Phone #:
         <asp:TextBox ID="phonenumber" runat="server" />
+        <asp:RequiredFieldValidator ID="phonenumber_validator" runat="server" controltovalidate="phonenumber" ErrorMessage="Please Enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         Unit #
         <asp:TextBox ID="unitnum" runat="server" visible="true"/>
+        <asp:RequiredFieldValidator ID="unitnum_validator" runat="server" controltovalidate="unitnum" ErrorMessage="Please Enter a unit number!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br /><br />
         Parking:
         <asp:RadioButtonList ID="parkingButton" runat="server">
@@ -57,15 +62,17 @@
         <asp:ListItem>5</asp:ListItem>
         </asp:DropDownList>
         <div id="dynamicInput2" visible="false"></div><br />
-        
-    <asp:Button ID="submit" runat="server" Text="Submit" onClick="submit_button"/>
 
-    <!--<asp:Label ID="label" runat="server"></asp:Label>--!>
+        <asp:Button ID="submit" runat="server" Text="Submit" OnClick="submit_button"/>
 
-    <asp:HiddenField ID="hdnfield" runat="server" />
-    <!-- Add a HiddenField for each potential value. Each of these fields will correspond with
-        an input field that will be dynamically created. Since a maximum of five inquiries will be
-        allowed, we will need at least 30 hiddenfields. -->
+        <asp:Label ID="label" runat="server" ClientIDMode="Static"></asp:Label>
+
+        <asp:HiddenField ID="hdnfield" runat="server" ClientIDMode="Static"/>
+        <asp:HiddenField ID="hdnfield2" runat="server" ClientIDMode="Static" />
+        <asp:HiddenField ID="hdnfield3" runat="server" ClientIDMode="Static" />
+        <!-- Add a HiddenField for each potential value. Each of these fields will correspond with
+            an input field that will be dynamically created. Since a maximum of five inquiries will be
+            allowed, we will need at least 30 hiddenfields. -->
 
     </div>
 

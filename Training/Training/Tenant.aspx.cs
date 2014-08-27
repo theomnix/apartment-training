@@ -18,6 +18,8 @@ namespace Training
 
         protected void submit_button(object sender, EventArgs e)
         {
+            label.Text = hdnfield.Value;
+
             Random rand = new Random();
             int id = rand.Next(0, 200000);
             int spouse_id = 0;
@@ -58,13 +60,22 @@ namespace Training
                 SqlCommand command2 = new SqlCommand(addTenant, myConnection);
                 command2.ExecuteNonQuery();
 
+                SqlCommand command3 = new SqlCommand("CoTenant_Insert", myConnection);
+                command3.CommandType = System.Data.CommandType.StoredProcedure;
+                command3.Parameters.Add(new SqlParameter("@Spouse_Firstname", hdnfield.Value));
+                command3.Parameters.Add(new SqlParameter("@Spouse_Lastname", hdnfield2.Value));
+                command3.Parameters.Add(new SqlParameter("@Spouse_PhoneNumber", hdnfield3.Value));
+                command3.Parameters.Add(new SqlParameter("@CoTenantID", spouse_id));
+
+                command3.ExecuteNonQuery();
+
                 Response.Write("<script type='text/javascript'>");
                 Response.Write("alert('" + apt + "');");
                 Response.Write("</script>");
                 myConnection.Close();
             }
 
-            if(parkingButton.SelectedItem.ToString() == "Yes")
+            if (parkingButton.SelectedItem.ToString() == "Yes")
             {
                 Response.Redirect("http://localhost:54810/ParkingLot");
             }

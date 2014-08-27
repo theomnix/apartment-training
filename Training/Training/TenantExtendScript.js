@@ -11,9 +11,9 @@ function getSelected()
     if (radio[0].checked)
     {
             newdiv = document.createElement('div');
-            newdiv.innerHTML = "Spouses First Name: <input type='text' id='firstname'>" +
-                               "<br/>Spouses Last Name: <input text='text' id='lastname'>" +
-                               "<br/>Spouses Phone #: <input text='text' id='phonenum'>";
+            newdiv.innerHTML = "Spouses First Name: <input type='text' id='spouse_firstname' onblur='update1()'>" +
+                               "<br/>Spouses Last Name: <input text='text' id='spouse_lastname' onblur='update2()'>" +
+                               "<br/>Spouses Phone #: <input text='text' id='spouse_phonenum' onblur='update3()'>";
             document.getElementById('dynamicInput').appendChild(newdiv);
     }
     else
@@ -34,4 +34,28 @@ function getSelected()
     //    }
 
     //}
+}
+
+function update1()
+{
+    //alert("Hi");
+    document.getElementById("hdnfield").value = document.getElementById("spouse_firstname").value;
+    //if (document.getElementById("label") != null)
+    //{
+    //    alert("It Worked!");
+    //}
+    //else
+    //{
+    //    alert("It Failed!");
+    //}
+}
+
+function update2()
+{
+    document.getElementById("hdnfield2").value = document.getElementById("spouse_lastname").value;
+}
+
+function update3()
+{
+    document.getElementById("hdnfield3").value = document.getElementById("spouse_phonenum").value;
 }
