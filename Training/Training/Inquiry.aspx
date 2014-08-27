@@ -31,10 +31,13 @@
     </div>
     <script src="expandscript.js" type="text/javascript"></script>
     <script src="datascript.js" type="text/javascript"></script>
+    <script src="shrinkscript.js" type="text/javascript"></script>
+
     <div id="dynamicInput">
           <br>
     </div>
     <input type="button" value="+" onClick="addInput('dynamicInput');">
+    <input type="button" value="-" onClick="removeInput();">
     <br /> <br />
     <input type="button" name="Commit" value="Submit" id="commit" onClick="javascript: Submit()"/>
     <script type="text/javascript">

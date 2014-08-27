@@ -6,23 +6,14 @@ function addInput(divName) {
     }
     else {
         var newdiv = document.createElement('div');
-        newdiv.innerHTML = "Inquiry " + counter + "<br>First name: <input type='text' id='firstname" + counter + "'>";
+        newdiv.setAttribute("id", "test" + counter + "");
+        newdiv.innerHTML = "Inquiry " + counter + "<br><p id='f" + counter + "'> First name:<input type='text' id='firstname" + counter + "'>" +
+            "<br/>Last name: <input type='text' id='lastname" + counter + "'>" +
+            "<br/>Phone#: <input type='text' id='phonenumber" + counter + "'>" +
+            "<br/>Number of baths: <input type='text' id='numofbaths" + counter + "'>" +
+            "<br/>Number of bedrooms: <input type='text' id='numofbeds" + counter + "'>" +
+            "<br/>Square footage: <input type='text' id='sqrfootage" + counter + "'><br><br></p>";
         document.getElementById(divName).appendChild(newdiv);
-        var newdiv2 = document.createElement('div');
-        newdiv2.innerHTML = "Last name: <input type='text' id='lastname" + counter + "'>";
-        document.getElementById(divName).appendChild(newdiv2);
-        var newdiv3 = document.createElement('div');
-        newdiv3.innerHTML = "Phone#: <input type='text' id='phonenumber" + counter + "'>";
-        document.getElementById(divName).appendChild(newdiv3);
-        var newdiv4 = document.createElement('div');
-        newdiv4.innerHTML = "Number of baths: <input type='text' id='numofbaths" + counter + "'>";
-        document.getElementById(divName).appendChild(newdiv4);
-        var newdiv5 = document.createElement('div');
-        newdiv5.innerHTML = "Number of bedrooms: <input type='text' id='numofbeds" + counter + "'>";
-        document.getElementById(divName).appendChild(newdiv5);
-        var newdiv6 = document.createElement('div');
-        newdiv6.innerHTML = "Square footage: <input type='text' id='sqrfootage" + counter + "'><br><br>";
-        document.getElementById(divName).appendChild(newdiv6);
         if (counter === 2) {
             document.getElementById('firstname2').value = document.getElementById('firstname').value;
             firstname2.value = firstname.value;
@@ -57,6 +48,10 @@ function addInput(divName) {
         document.getElementById('MainContent_hdnfield').value = counter;
         
     }
+}
+
+function setCounter(count) {
+    counter = count;
 }
 
 function getCounter() {
