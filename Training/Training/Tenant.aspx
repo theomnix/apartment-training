@@ -7,31 +7,35 @@
     
     <div id="inquiry1">
         <br /> <br />
-        <h4>Tenant HQ</h4>
+        <h4>Tenant Info Entry</h4>
         <br /> 
         Tenant
         <br />
         First name:
         <asp:TextBox ID="firstname" runat="server" MaxLength="50" />
-        <asp:RequiredFieldValidator ID="firstname_validator" runat="server" controltovalidate="firstname" ErrorMessage="Please Enter a first name!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="firstname_validator" runat="server" controltovalidate="firstname" ErrorMessage="Please enter a first name!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         Last name:
-        <asp:TextBox ID="lastname" runat="server" />
-        <asp:RequiredFieldValidator ID="lastname_validator" runat="server" controltovalidate="lastname" ErrorMessage="Please Enter a last name!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="lastname" runat="server" MaxLength="50"/>
+        <asp:RequiredFieldValidator ID="lastname_validator" runat="server" controltovalidate="lastname" ErrorMessage="Please enter a last name!" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         Phone #:
-        <asp:TextBox ID="phonenumber" runat="server" />
-        <asp:RequiredFieldValidator ID="phonenumber_validator" runat="server" controltovalidate="phonenumber" ErrorMessage="Please Enter a phone number!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="phonenumber" runat="server" MaxLength="12" />
+        <asp:RequiredFieldValidator ID="phonenumber_validator" runat="server" controltovalidate="phonenumber" ErrorMessage="Please enter a phone number!" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator id="phonenumber_reg_validator" runat="server" controltovalidate="phonenumber" validationexpression="\d{3}-\d{3}-\d{4}" enableclientscript="true" errormessage="Please enter format such as: 000-000-0000" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
         <br />
         Unit #
-        <asp:TextBox ID="unitnum" runat="server" visible="true"/>
-        <asp:RequiredFieldValidator ID="unitnum_validator" runat="server" controltovalidate="unitnum" ErrorMessage="Please Enter a unit number!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="unitnum" runat="server" visible="true" MaxLength="4" />
+        <asp:RequiredFieldValidator ID="unitnum_validator" runat="server" controltovalidate="unitnum" ErrorMessage="Please enter a unit number!" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator id="unitnum_reg_validator" runat="server" controltovalidate="unitnum" validationexpression="[a-zA-Z]\d{3}" enableclientscript="true" errormessage="Please enter format such as: A103" ForeColor="Red" Display="Dynamic"></asp:RegularExpressionValidator>
+        
         <br /><br />
         Parking:
         <asp:RadioButtonList ID="parkingButton" runat="server">
             <asp:ListItem>Yes</asp:ListItem>
             <asp:ListItem>No</asp:ListItem>
-        </asp:RadioButtonList><br />
+        </asp:RadioButtonList>
+        <asp:RequiredFieldValidator ID="parking_validator" runat="server" controltovalidate="parkingButton" ErrorMessage="Please select parking option!" ForeColor="Red"></asp:RequiredFieldValidator><br />
         
         <%--How many parking spaces?--%>
         <asp:DropDownList ID="parking" runat="server" visible="false">
@@ -48,7 +52,8 @@
         <asp:RadioButtonList ID="marriedRadio" runat="server" onclick="getSelected()">
             <asp:ListItem>Yes</asp:ListItem>
             <asp:ListItem>No</asp:ListItem>
-        </asp:RadioButtonList><br/>
+        </asp:RadioButtonList>
+        <asp:RequiredFieldValidator ID="married_validator" runat="server" controltovalidate="marriedRadio" ErrorMessage="Please select marriage option!" ForeColor="Red"></asp:RequiredFieldValidator><br/>
         <div id="dynamicInput"></div><br />
 
         How many children?
@@ -61,6 +66,7 @@
         <asp:ListItem>4</asp:ListItem>
         <asp:ListItem>5</asp:ListItem>
         </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="children_validator" runat="server" controltovalidate="childrenSelect" InitialValue="---Select---" ErrorMessage="Please select an option from the dropdown menu!" ForeColor="Red"></asp:RequiredFieldValidator>
         <div id="dynamicInput2" visible="false"></div><br />
 
         <asp:Button ID="submit" runat="server" Text="Submit" OnClick="submit_button"/>

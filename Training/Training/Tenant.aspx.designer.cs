@@ -67,6 +67,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator phonenumber_validator;
         
         /// <summary>
+        /// phonenumber_reg_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator phonenumber_reg_validator;
+        
+        /// <summary>
         /// unitnum control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator unitnum_validator;
         
         /// <summary>
+        /// unitnum_reg_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator unitnum_reg_validator;
+        
+        /// <summary>
         /// parkingButton control.
         /// </summary>
         /// <remarks>
@@ -92,6 +110,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList parkingButton;
+        
+        /// <summary>
+        /// parking_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator parking_validator;
         
         /// <summary>
         /// parking control.
@@ -112,6 +139,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.RadioButtonList marriedRadio;
         
         /// <summary>
+        /// married_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator married_validator;
+        
+        /// <summary>
         /// childrenSelect control.
         /// </summary>
         /// <remarks>
@@ -119,6 +155,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList childrenSelect;
+        
+        /// <summary>
+        /// children_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator children_validator;
         
         /// <summary>
         /// submit control.
