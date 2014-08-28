@@ -44,8 +44,9 @@
             <asp:FilteredTextBoxExtender ID="OwnerNumber" runat="server" TargetControlID="NewOwner" FilterType="Numbers" />
             <asp:Button ID="Claimbutton" runat="server" Text="Claim Parking Spot" OnClick="Claimbutton_Click" /><br />
         <asp:TextBox ID="adminpass" runat="server" OnTextChanged="adminpass_TextChanged" TextMode="Password"  AutoPostBack="true"/>
-        <asp:Button ID="AButton" Text="Press ME!" runat="server" Enabled="false" />
-        <asp:Panel ID="ThePanel" runat="server" Visible="true" BorderWidth="10" BorderColor="Tomato" BackColor="Teal">
+        <asp:Button ID="AButton" Text="Admin Login" runat="server" Enabled="false" />
+        
+        <asp:Panel ID="ThePanel" runat="server" Visible="true" BorderWidth="30" BorderColor="Yellow" BackColor="Pink">
                 <h3>New Parking Lot:</h3>
         <p><b>Closest Building:</b></p>
         <asp:DropDownList ID="Buildingchoose" runat="server" DataSourceID="SqlDataSource4" DataTextField="Building" DataValueField="Building" />
@@ -80,7 +81,7 @@
         <asp:Button ID="canc" runat="server" Text="Cancel" />
         </asp:Panel>
         
-        <asp:ModalPopupExtender ID="ModalPop" runat="server" PopupControlID="ThePanel" TargetControlID="AButton" DropShadow="true" CancelControlID="canc" OkControlID="but" Drag="true" />
+        <asp:ModalPopupExtender ID="ModalPop" runat="server" PopupControlID="ThePanel" TargetControlID="AButton" DropShadow="true" CancelControlID="canc" Drag="true"/>
 
     
     </div>

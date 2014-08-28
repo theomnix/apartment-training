@@ -52,6 +52,7 @@ namespace Training
             
             conn.Close();
             populateSpots();
+            AButton.Enabled = false;
            
             
         }
@@ -151,11 +152,11 @@ namespace Training
            
             owns.Parameters.Add("@Owner", SqlDbType.Int).Value = Convert.ToInt32(NewOwner.Text);
             
-            //connect.Open();
+            connect.Open();
             SqlDataReader read = owns.ExecuteReader();
             //owns.ExecuteNonQuery();
             read.Read();
-            connect.Close();
+           
             if (read.HasRows)
             {
                 setOwnerEvent();
@@ -169,7 +170,7 @@ namespace Training
                 Response.Write("alert('You did not enter a valid tenant ID!!');");
                 Response.Write("</script>");
             }
-            
+             connect.Close();
             
 
         }
