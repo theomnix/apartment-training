@@ -31,6 +31,15 @@ namespace Training {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator firstname_validator;
         
         /// <summary>
+        /// firstname_reg_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator firstname_reg_validator;
+        
+        /// <summary>
         /// lastname control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Training {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator lastname_validator;
+        
+        /// <summary>
+        /// lastname_reg_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator lastname_reg_validator;
         
         /// <summary>
         /// phonenumber control.
