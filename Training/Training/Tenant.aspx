@@ -8,8 +8,6 @@
     <div id="inquiry1">
         <br /> <br />
         <h4>Flat Reservation Info</h4>
-        <br /> 
-        Tenant
         <br />
         First name:
         <asp:TextBox ID="firstname" runat="server" MaxLength="50" />
@@ -50,12 +48,12 @@
             <asp:ListItem Text="5" />
         </asp:DropDownList>
         <br /><br />
-        Married:
-        <asp:RadioButtonList ID="marriedRadio" runat="server" onclick="getSelected()">
+        Co-Tenant:
+        <asp:RadioButtonList ID="coTenantRadio" runat="server" onclick="getSelected()">
             <asp:ListItem>Yes</asp:ListItem>
             <asp:ListItem>No</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:RequiredFieldValidator ID="married_validator" runat="server" controltovalidate="marriedRadio" ErrorMessage="Please select marriage option!" ForeColor="Red"></asp:RequiredFieldValidator><br/>
+        <asp:RequiredFieldValidator ID="coTenant_validator" runat="server" controltovalidate="coTenantRadio" ErrorMessage="Please select marriage option!" ForeColor="Red"></asp:RequiredFieldValidator><br/>
         <div id="dynamicInput"></div><br />
 
         How many children?

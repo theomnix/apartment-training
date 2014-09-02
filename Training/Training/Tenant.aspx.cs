@@ -22,12 +22,12 @@ namespace Training
 
             Random rand = new Random();
             int id = rand.Next(0, 200000);
-            int spouse_id = 0;
+            int cotenant_id = 0;
 
-            if(marriedRadio.SelectedItem.ToString() == "Yes")
+            if(coTenantRadio.SelectedItem.ToString() == "Yes")
             {
                 Random rand2 = new Random();
-                spouse_id = rand.Next(0, 200000);
+                cotenant_id = rand.Next(0, 200000);
             }
             
             if (IsValid)
@@ -47,7 +47,7 @@ namespace Training
                 command.Parameters.Add(new SqlParameter("@LastName", lastname.Text));
                 command.Parameters.Add(new SqlParameter("@PhoneNumber", phonenumber.Text));
                 command.Parameters.Add(new SqlParameter("@TennantID", id));
-                command.Parameters.Add(new SqlParameter("@SpouseID", spouse_id));
+                command.Parameters.Add(new SqlParameter("@CotenantID", cotenant_id));
                 command.Parameters.Add(new SqlParameter("@NumofChildren", int.Parse(childrenSelect.SelectedItem.Text)));
 
                 command.ExecuteNonQuery();
@@ -65,7 +65,7 @@ namespace Training
                 command3.Parameters.Add(new SqlParameter("@Spouse_Firstname", hdnfield.Value));
                 command3.Parameters.Add(new SqlParameter("@Spouse_Lastname", hdnfield2.Value));
                 command3.Parameters.Add(new SqlParameter("@Spouse_PhoneNumber", hdnfield3.Value));
-                command3.Parameters.Add(new SqlParameter("@CoTenantID", spouse_id));
+                command3.Parameters.Add(new SqlParameter("@CoTenantID", cotenant_id));
 
                 command3.ExecuteNonQuery();
 

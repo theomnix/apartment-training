@@ -148,22 +148,22 @@ namespace Training {
         protected global::System.Web.UI.WebControls.DropDownList parking;
         
         /// <summary>
-        /// marriedRadio control.
+        /// coTenantRadio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList marriedRadio;
+        protected global::System.Web.UI.WebControls.RadioButtonList coTenantRadio;
         
         /// <summary>
-        /// married_validator control.
+        /// coTenant_validator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator married_validator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator coTenant_validator;
         
         /// <summary>
         /// childrenSelect control.
