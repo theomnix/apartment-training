@@ -188,6 +188,12 @@ namespace Training
            
             owns.ExecuteNonQuery();
             connect.Close();
+            SqlCommand lots = new SqlCommand("updateoccupied", connect);
+            lots.CommandType = CommandType.StoredProcedure;
+            lots.Parameters.Add("@Occupied", SqlDbType.Int).Value = LotChoose.SelectedValue;
+            connect.Open();
+            lots.ExecuteNonQuery();
+            connect.Close();
         }
 
         protected void AButton_Click(object sender, EventArgs e)
